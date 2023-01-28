@@ -1,1 +1,187 @@
 /* You can add global styles to this file, and also import other style files */
+
+//base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+// custom classes
+.container {
+  max-width: min(100%, 1200px);
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.my-1 {
+  margin: 1rem;
+}
+.my-normal {
+  margin: 0.5rem;
+}
+
+// styles
+
+.rocket-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.rocket-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.rocket-card h2 {
+  margin: 0.5rem 0;
+}
+
+.rocket-card p {
+  margin: 0.5rem 0;
+}
+
+.rocket-card button {
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 0rem;
+}
+
+.rocket-card button:hover {
+  background-color: #ccc;
+}
+
+.rocket-card button:active {
+  background-color: #aaa;
+}
+
+.app-title {
+  text-align: center;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0rem;
+}
+.app-title span {
+  font-size: 4rem;
+  font-weight: bold;
+  display: block;
+  color: #000;
+}
+
+/* rocket title */
+.rocket-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0rem;
+  margin: 0rem;
+  background-color: aliceblue;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+  border: 1px solid gainsboro;
+}
+.rocket-header input,
+.rocket-header select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.rocket-header input {
+  width: 100%;
+}
+.rocket-header .filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.rocket-header .filter__item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.rocket-header select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.rocket-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 0rem;
+  padding: 0rem;
+  position: relative;
+}
+
+.meta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.meta .meta__item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+.meta .meta__item span {
+  font-weight: bold;
+}

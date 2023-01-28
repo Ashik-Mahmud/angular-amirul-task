@@ -1,0 +1,45 @@
+<div>
+  <div class="rocket-header">
+    <div class="filter">
+      <div class="filter__item">
+        <label htmlFor="byUpcoming">Upcoming</label>
+        <select
+          name="byUpcoming"
+          id="byUpcoming"
+          (change)="onComingSoonChange($event)"
+        >
+          <option value="">select</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+      <div class="filter__item">
+        <label htmlFor="status">Launch Status</label>
+        <select
+          name="status"
+          id="status"
+          (change)="onLaunchSuccessChange($event)"
+        >
+          <option value="">select</option>
+          <option value="true">Success</option>
+          <option value="false">Failed</option>
+        </select>
+      </div>
+    </div>
+    <div class="search">
+      <input
+        type="text"
+        placeholder="Search"
+        (input)="onSearchChange($event)"
+      />
+    </div>
+  </div>
+
+  <div *ngIf="loadingRocket">loading...</div>
+  <div *ngIf="!loadingRocket && rockets.length === 0">No data found</div>
+  <div class="rocket-content" *ngIf="!loadingRocket && rockets.length > 0">
+    <ng-container *ngFor="let rocket of rockets; let i = index">
+      <app-rocket [rocket]="rocket" [index]="i"></app-rocket>
+    </ng-container>
+  </div>
+</div>
