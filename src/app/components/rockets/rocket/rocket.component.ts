@@ -9,4 +9,5 @@ export class RocketComponent {
   @Input() rocket: any;
   @Input() index: number | undefined;
   constructor() {}
+  ngOnInit() {}
 }

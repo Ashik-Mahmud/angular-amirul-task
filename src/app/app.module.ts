@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RocketsComponent } from './components/rockets/rockets.component';
 import { RocketComponent } from './components/rockets/rocket/rocket.component';
+import { RocketDetailComponent } from './components/rockets/rocket-detail/rocket-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RocketsComponent,
-    RocketComponent
+    RocketComponent,
+    RocketDetailComponent
   ],
   imports: [
     BrowserModule,
