@@ -1,1 +1,22 @@
-<p>rocket-detail works!</p>
+<div class="details-rocket">
+  <div *ngIf="isLoading">Loading...</div>
+  <ng-container *ngIf="!isLoading">
+    <div class="title">
+      <span (click)="onGoBack()">
+        <i class="pi pi-chevron-left" style="font-size: 1rem"></i>
+      </span>
+      <h3>{{ rocket?.rocket?.rocket_name }}</h3>
+    </div>
+    <div class="image">
+      <img
+        [src]="rocket?.links?.mission_patch"
+        [alt]="rocket?.rocket?.rocket_name"
+      />
+    </div>
+    <div class="details">
+      <p>
+        {{ rocket?.details }}
+      </p>
+    </div>
+  </ng-container>
+</div>

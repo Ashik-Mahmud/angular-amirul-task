@@ -1,0 +1,25 @@
+.details-rocket {
+  position: relative;
+  padding: 3rem;
+  background-color: #fafafa;
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    span {
+      cursor: pointer;
+    }
+  }
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+  }
+  .details {
+    margin: 1rem 0rem;
+    position: relative;
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
